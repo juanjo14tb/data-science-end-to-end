@@ -18,3 +18,9 @@ data/processed/
 
 # Logs
 *.log
+
+
+# Datos generados por Docker
+data-contenedor/
+
+Thumbs.db
