@@ -14,6 +14,13 @@ Para esta sesión utilizamos Python, pandas y matplotlib.
 Las dependencias están en `requirements.txt` y los ejercicios se pueden ejecutar utilizando Docker.
 
 Los gráficos generados se guardan en las carpetas `figuras/` correspondientes a cada ejercicio.
+pandas y matplotlib ya vienen en el Codespace. En tu laptop, instálalos con `pip install -r requirements.txt` desde la raíz del repositorio. Verifica con:
+
+```
+python3 -c "import matplotlib; print(matplotlib.__version__)"
+```
+
+Los scripts de hoy guardan cada gráfico como imagen en una carpeta `figuras/`. Ábrelas desde el explorador de archivos de VS Code. También puedes correr el mismo código en un notebook de Jupyter (en el Codespace, crea un archivo `.ipynb` y elige el kernel de Python 3.11), donde el gráfico aparece debajo de la celda.
 
 ## Antes de empezar
 
@@ -38,10 +45,19 @@ Por eso es importante explorar los datos antes de entrenar el modelo, utilizando
 ## Ejercicio 1: Resumen, distribución y atípicos
 
 Dataset: `starter/viajes_taxi.csv`
+Archivo: [`starter/ejercicio1_explorar.py`](./starter/ejercicio1_explorar.py), sobre [`starter/viajes_taxi.csv`](./starter/viajes_taxi.csv): 3000 viajes en taxi de Nueva York, con fecha y hora de inicio, zona de origen y de destino, distancia, duración, pasajeros, método de pago, tarifa y propina. El script ya lee el archivo, arma los gráficos y los guarda en `figuras/`; faltan 4 `TODO`. Córrelo una vez antes de tocar nada:
+
+```
+cd laboratorios/semana-08-sesion-02/starter
+python3 ejercicio1_explorar.py
+```
+
+**Respuesta 1 (TODO 1), antes de ver la solución:** en `describe()`, ¿qué dos valores de la tabla te harían sospechar de un error sin necesidad de graficar nada?
 
 El archivo contiene 3000 registros de viajes en taxi de Nueva York, incluyendo distancia, duración, número de pasajeros, método de pago, tarifa y propina.
 
 ### Respuesta 1: ¿Qué dos valores de describe() te harían sospechar de un error?
+**Respuesta 2 (TODO 2):** abre `figuras/hist_tarifa.png` después del TODO 2. ¿Por qué casi todo el histograma queda comprimido a la izquierda?
 
 Los dos valores que llaman la atención son:
 
@@ -116,6 +132,11 @@ Aunque la duración real tenga una correlación alta con la tarifa, todavía no 
 Pendiente de completar según lo realizado durante la actividad de clase.
 
 ## Ejercicio 2: Relaciones entre variables
+Solo o en pareja. Archivo: [`starter/ejercicio2_relaciones.py`](./starter/ejercicio2_relaciones.py), sobre el mismo `viajes_taxi.csv`. Quita solo los errores que el Ejercicio 1 ya confirmó y completa los 5 `TODO`: dispersión de distancia contra tarifa, propina por método de pago, correlaciones con la tarifa, y pasajeros vacíos o en 0. Al final, el script imprime una comprobación por TODO: completa los 5 hasta que todas digan `OK`.
+
+```
+python3 ejercicio2_relaciones.py
+```
 
 El código se encuentra en:
 

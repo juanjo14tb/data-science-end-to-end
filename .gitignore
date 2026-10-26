@@ -1,26 +1,42 @@
-# Python (a partir de la Semana 3)
+# Python
 __pycache__/
 *.pyc
 .venv/
 venv/
 .ipynb_checkpoints/
 
-# Datos y modelos locales (nunca se suben, ver PSets para dónde documentar su origen)
+# Datos y modelos locales
 data/raw/
 data/processed/
-*.parquet
 *.pkl
 
 # Editor / OS
 .DS_Store
 .vscode/*
 !.vscode/extensions.json
+Thumbs.db
 
 # Logs
 *.log
 
-
 # Datos generados por Docker
 data-contenedor/
 
-Thumbs.db
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# dbt y Spark
+target/
+dbt_packages/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Material reemplazado
+_to_delete/
